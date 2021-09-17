@@ -12,7 +12,7 @@ function [p_poles,err] = FastAAAcompare(f,Z,tol,normalize,iter)
 %poitns fz.
 
 
-mmax=100;         %Max number of Support Points
+nmax=400;         %Max number of Support Points
 k=size(f,1);     %The number of functions
 
 if(normalize)    %Nomalize Each function
@@ -36,7 +36,7 @@ for i=1:k
 end
 
 %Primary Iteration to compute the barycentric rational approximations
-for n=1:300
+for n=1:nmax
     if(length(z)==length(Z));
         fprintf('FastAAA ran out of support points!\n');
         p_poles=[]; %Flag if stable partial fraction did no converge

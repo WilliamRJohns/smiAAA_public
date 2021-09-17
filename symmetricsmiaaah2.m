@@ -12,7 +12,7 @@ function [bestbcr,bestw,bcr,z,wj,fz,err] = symetricsmiaaah2(f,Z,tol,normalize,it
 %poitns fz.
 
 
-mmax=111;        %Max number of Support Points
+mmax=400;        %Max number of Support Points
 k=size(f,1);     %The number of functions
 
 if(normalize)    %Nomalize Each function     for H2
